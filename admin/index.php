@@ -31,10 +31,10 @@ if ($action == "add")
         <a href="/article.php?id=<?=$article["id"]?>">
             <?= $article["title"] ?>
         </a>
+        <a class="btn btn-danger float-right" href="index.php?action=delete&id=<?=$article["id"]?>">
+            Delete article
+        </a>
     </h1>
-    <a href="index.php?action=delete&id=<?=$article["id"]?>">
-        Delete article
-    </a>
     <p>
         <?= shorten_text($article["text"]) ?>
     </p>
