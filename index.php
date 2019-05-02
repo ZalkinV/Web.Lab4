@@ -1,6 +1,7 @@
 <?php
 require_once "models/database.php";
 require_once "views/header.html";
+require_once "views/visual_functions.php"
 ?>
 
 <div class="container">
@@ -13,7 +14,7 @@ require_once "views/header.html";
         </a>
     </h1>
     <p>
-        <?= $article["text"] ?>
+        <?= shorten_text($article["text"]) ?>
     </p>
     <hr>
     <?php endforeach; ?>
