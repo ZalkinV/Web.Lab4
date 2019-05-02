@@ -24,4 +24,13 @@ function get_articles()
     return $articles;
 }
 
+function get_article($id)
+{
+    global $connection;
+    $query = "SELECT * FROM articles WHERE id={$id}";
+    $query_result = mysqli_query($connection, $query);
+    $article = mysqli_fetch_assoc($query_result);
+    return $article;
+}
+
 ?>
