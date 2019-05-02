@@ -7,6 +7,12 @@ require_once "../views/visual_functions.php";
 if (isset($_GET["action"]))
     $action = $_GET["action"];
 
+if ($action == "delete")
+{
+    $article_id = $_GET["id"];
+    delete_article($article_id);
+}
+
 ?>
 
 <div class="container">
