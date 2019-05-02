@@ -13,6 +13,13 @@ if ($action == "delete")
     delete_article($article_id);
 }
 
+if ($action == "add")
+{
+    $article_title = $_POST["title"];
+    $article_text = $_POST["text"];
+    add_article($article_title, $article_text);
+}
+
 ?>
 
 <div class="container">
