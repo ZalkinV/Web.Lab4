@@ -16,6 +16,7 @@ if ($action == "delete")
 ?>
 
 <div class="container">
+    <a href="article_adding.php">Добавить статью</a>
     <?php
     $articles = get_articles();
     foreach ($articles as $article): ?>
