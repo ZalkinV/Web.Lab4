@@ -16,7 +16,7 @@ if ($action == "delete")
 ?>
 
 <div class="container">
-    <a href="article_adding.php">Добавить статью</a>
+    <a href="article_adding.php">Add article</a>
     <?php
     $articles = get_articles();
     foreach ($articles as $article): ?>
@@ -26,7 +26,7 @@ if ($action == "delete")
         </a>
     </h1>
     <a href="index.php?action=delete&id=<?=$article["id"]?>">
-        Удалить
+        Delete article
     </a>
     <p>
         <?= shorten_text($article["text"]) ?>
