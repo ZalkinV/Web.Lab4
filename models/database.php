@@ -33,4 +33,11 @@ function get_article($id)
     return $article;
 }
 
+function delete_article($id)
+{
+    global $connection;
+    $query = "DELETE FROM articles WHERE id={$id}";
+    $query_result = mysqli_query($connection, $query);
+}
+
 ?>
