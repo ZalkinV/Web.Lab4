@@ -13,4 +13,15 @@ if (mysqli_connect_errno())
     exit();
 }
 
+
+
+function get_articles()
+{
+    global $connection;
+    $query = "SELECT * FROM articles";
+    $query_result = mysqli_query($connection, $query);
+    $articles = mysqli_fetch_all($query_result, MYSQLI_ASSOC);
+    return $articles;
+}
+
 ?>
