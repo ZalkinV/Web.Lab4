@@ -27,14 +27,20 @@ if ($action == "add")
     <?php
     $articles = get_articles();
     foreach ($articles as $article): ?>
-    <h1>
-        <a href="/article.php?id=<?=$article["id"]?>">
-            <?= $article["title"] ?>
-        </a>
-        <a class="btn btn-danger float-right" href="index.php?action=delete&id=<?=$article["id"]?>">
-            Delete article
-        </a>
-    </h1>
+    <div class="row">
+        <div class="col-sm-8">
+            <h1>
+                <a href="/article.php?id=<?=$article["id"]?>">
+                    <?= $article["title"] ?>
+                </a>
+            </h1>
+        </div>
+        <div class="col-sm-4 text-sm-right my-auto">
+            <a class="btn btn-danger" href="index.php?action=delete&id=<?=$article["id"]?>">
+                Delete article
+            </a>
+        </div>
+    </div>
     <p>
         <?= shorten_text($article["text"]) ?>
     </p>
