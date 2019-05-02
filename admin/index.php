@@ -13,6 +13,9 @@ require_once "../views/visual_functions.php";
             <?= $article["title"] ?>
         </a>
     </h1>
+    <a href="index.php?action=delete&id=<?=$article["id"]?>">
+        Удалить
+    </a>
     <p>
         <?= shorten_text($article["text"]) ?>
     </p>
