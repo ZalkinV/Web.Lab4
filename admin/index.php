@@ -1,7 +1,7 @@
 <?php
-require_once "models/database.php";
-require_once "views/header.html";
-require_once "views/visual_functions.php"
+require_once "../models/database.php";
+require_once "../views/header.html";
+require_once "../views/visual_functions.php";
 ?>
 
 <div class="container">
