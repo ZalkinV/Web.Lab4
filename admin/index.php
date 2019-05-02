@@ -23,7 +23,7 @@ if ($action == "add")
 ?>
 
 <div class="container">
-    <a href="article_adding.php">Add article</a>
+    <a class="btn btn-success mb-3" href="article_adding.php">Create article</a>
     <?php
     $articles = get_articles();
     foreach ($articles as $article): ?>
