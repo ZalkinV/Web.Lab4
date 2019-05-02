@@ -40,4 +40,11 @@ function delete_article($id)
     $query_result = mysqli_query($connection, $query);
 }
 
+function add_article($title, $text)
+{
+    global $connection;
+    $query = "INSERT INTO articles (id, title, text) VALUES (NULL, '{$title}', '{$text}')";
+    $query_result = mysqli_query($connection, $query);
+}
+
 ?>
