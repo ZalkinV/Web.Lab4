@@ -9,7 +9,7 @@ require_once "views/visual_functions.php"
     $articles = get_articles();
     foreach ($articles as $article): ?>
     <h1>
-        <a href="#">
+        <a href="/article.php?id=<?=$article["id"]?>">
             <?= $article["title"] ?>
         </a>
     </h1>
